@@ -1,0 +1,19 @@
+# AddonsDaasPremier
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**direct_check** | **string** | Send back subscriber information on the credit profile. When set to Y indicates that subscriber and court names, addresses, and phone numbers who have reported data on the consumer&#39;s profile will be sent back on the response. | [optional] 
+**demographics** | **string** | Indicates the type of demographic data that should be returned back. | [optional] 
+**risk_models** | [**\OpenAPI\Client\Model\RiskModelDaas**](RiskModelDaas.md) |  | [optional] 
+**summaries** | [**\OpenAPI\Client\Model\AddonsSummaries**](AddonsSummaries.md) |  | [optional] 
+**fraud_shield** | **string** | Y - Fraud Shield Product Option will be output | [optional] 
+**mla** | **string** | Y - Trigger a screening process of taking the consumer data from an inquiry to match against the Dept of Defense MLA lists. Message codes 1203-1207 could be returned. Permissible Purpose with valid YOB required for getting this option. | [optional] 
+**ofacmsg** | **string** | Y- Trigger a screening process of taking the consumer data from an inquiry to match against the OFAC (Office of Foreign Asset Control) and PLC (Palestinian Legislative Council) lists. A message 1202 NAME DOES NOT MATCH OFAC/PLC LIST will be printed on credit profile if the consumer is not found on either OFAC or PLC list. A message 1200 NAME MATCHES OFAC/PLC LIST will be printed on credit profile if the consumer is found on either OFAC or PLC list. | [optional] 
+**consumer_ident_check** | [**\OpenAPI\Client\Model\ConsumerIdentifierCheckOptions**](ConsumerIdentifierCheckOptions.md) |  | [optional] 
+**joint** | **string** | If specified as Y it means that the client is requesting a joint credit report. This is used to request the Dual or Joint Report. Two separate credit reports are returned?one on the primary applicant and one on the secondary applicant. The joint applicant should have the same current address as the primary applicant. Include as much information on the joint applicant as possible, including the surname if it is different from the primary applicant. If NOt specified or N it means that a joint report is NOT being requested. | [optional] 
+**payment_history84** | **string** | Y.  84 month payment history is requested instead of the 25 month history. This can be omitted if 84 month history is not needed | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
